@@ -21,21 +21,41 @@ bottom: -40px;
 body .carousel-control-prev-icon,
 body .carousel-control-next-icon{
 background-color: blue;
+
 }
 .carousel-control-prev,
 .carousel-control-next{
 top: auto;
 bottom: auto;
 padding-top: 222px;
+
 }
 body .no-padding{
 padding-left: 0,
 padding-right: 0;
+
 }
 {% endblock %}
 {% block body %}
 {% load static %}
+
+
 <div class="container">
+    <div class="container ">
+          <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <img src="https://global-uploads.webflow.com/605826c62e8de87de744596e/6304972b0f458d536743e9d9_reebok.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://global-uploads.webflow.com/605826c62e8de87de744596e/6304972b0f458d536743e9d9_reebok.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://global-uploads.webflow.com/605826c62e8de87de744596e/6304972b0f458d536743e9d9_reebok.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+          </div>
+      </div>
     <!--Slideshow starts here -->
     {% for product, range, nSlides in allProds %}
     <h5 class="my-4">Flash Sale On {{product.0.category}} - Recommended Items</h5>
